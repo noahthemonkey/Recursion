@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="mergeSort.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="mergesort" placeholder="Enter numbers separated by comma">
+    <button onclick="displayMergeSort()">Sort</button>
+    <div><p id="merge"></p></div>
+
+    <script>
+        function displayMergeSort() {
+            const input = document.getElementById('mergesort').value;
+            const numbers = input.split(',').map(Number);
+            const sortedNumbers = mergeSort(numbers);
+            document.getElementById('merge').innerText = sortedNumbers.join(', ');
+        }
+        const mergeinput = document.getElementById('mergesort')
+        mergeinput.style.width = '50%'
+    </script>
+</body>
+</html>
